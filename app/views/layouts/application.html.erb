@@ -11,6 +11,11 @@
 
   <body>
     <%= render 'layouts/head' %>
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    
     <%= render 'layouts/container' %>
     <%= render 'layouts/footer' %>
   </body>
