@@ -50,6 +50,14 @@ class UsersController < ApplicationController
 		redirect_to users_url
 	end
 
+	def following
+		@following = current_user.following
+	end
+
+	def followers
+		@followers = current_user.followers
+	end
+
 	private
 
 	def user_params
